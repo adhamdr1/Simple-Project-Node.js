@@ -1,0 +1,25 @@
+{
+  "name": "simple-project-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adhamdr1/Simple-Project-Node.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/adhamdr1/Simple-Project-Node.js/issues"
+  },
+  "homepage": "https://github.com/adhamdr1/Simple-Project-Node.js#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "pg": "^8.18.0"
+  }
+}
