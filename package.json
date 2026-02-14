@@ -20,6 +20,7 @@
   "homepage": "https://github.com/adhamdr1/Simple-Project-Node.js#readme",
   "dependencies": {
     "dotenv": "^17.3.1",
+    "express": "^5.2.1",
     "pg": "^8.18.0"
   }
 }
