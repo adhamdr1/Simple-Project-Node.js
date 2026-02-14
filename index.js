@@ -14,9 +14,11 @@
 
 // testConnection();
 
-const express = require('express');
+// index.js
+import express from 'express';
+import employeeRoutes from './routes/employeeRoutes.js'; 
+
 const app = express();
-const employeeRoutes = require('./routes/employeeRoutes'); 
 
 app.use(express.json());
 

@@ -1,8 +1,10 @@
 // db.js
-require('dotenv').config(); // عشان نقرأ البيانات من ملف .env
-const { Pool } = require('pg');
+import dotenv from 'dotenv';
+import pg from 'pg'; 
 
-// إعداد الاتصال
+const { Pool } = pg;
+dotenv.config();
+
 const pool = new Pool({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
@@ -11,11 +13,9 @@ const pool = new Pool({
   port: process.env.DB_PORT,
 });
 
-// جملة بسيطة عشان نتأكد أول ما الملف يشتغل
 console.log("Attempting to connect to database...");
 
-// دالة عشان نجرب الاتصال
-// الميزة هنا إننا بنستخدم query مباشرة وده بيسهل علينا الشغل بعدين
-module.exports = {
-  query: (text, params) => pool.query(text, params),
-};
+// ⚠️ التغيير المهم هنا:
+// بدل module.exports = ...
+// هنستخدم export const عشان نقدر نعملها import { query } هناك
+export const query = (text, params) => pool.query(text, params);
